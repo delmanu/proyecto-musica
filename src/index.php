@@ -92,6 +92,7 @@
       <th>Artista</th>
       <th>Canción</th>
       <th>Fecha</th>
+      <th>Acción</th>
     </tr>
     <?php foreach ($registros as $r): ?>
       <tr>
@@ -104,6 +105,7 @@
         <td>
             <a href="editar.php?id=<?= $r['id'] ?>" style="color: #6200ea; text-decoration: none; font-weight: bold;">Editar</a>
         </td>
+	<td><a href="eliminar.php?id=<?= $r['id'] ?>" onclick="return confirm('¿Eliminar registro?')" style="color:red;">Eliminar</a></td>
       </tr>
     <?php endforeach; ?>
   </table>
